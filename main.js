@@ -1,12 +1,10 @@
 let edad = Number(prompt("ingrese su edad"));
 if(edad >= 18){
     alert("Sos mayor y podes ingresar en la web");
-}else{
-    alert("No eres mayor de edad por lo que no puedes entrar a la web");
-}
-let nombre = prompt("Como es tu nombre?");
+    let nombre = prompt("Como es tu nombre?");
 alert(`Bienvenido ${nombre}`);
-let numero = Number(prompt("Bienvenido al menu,las opciones son: 1:clasico 2:vegetariano 3:premium 4:seguir"));
+// en este apartado se ven lo que incluye el menu
+let numero = Number(prompt("Bienvenido al menu,para ver las opciones: 1:clasico 2:vegetariano 3:premium 4:seguir por el menu"));
 while(numero != 4){
     switch (numero){
         case 1:
@@ -22,14 +20,15 @@ while(numero != 4){
             alert("opcion incorrecta");
             break;
     }
-    numero = Number(prompt ("Bienvenido al menu,las opciones son: 1:clasico 2:vegetariano 3:premium 4:seguir"));
+    numero = Number(prompt ("Bienvenido al menu,para ver las opciones: 1:clasico 2:vegetariano 3:premium 4:seguir por el menu"));
 }
 function datospersonales(apellido){
-    alert(`Orden tomada para ${apellido}`);
+    alert(`Orden tomada para ${nombre} ${apellido}`);
 }
 let cliente = prompt(`Cual es tu apellido para tomar la orden:`);
 datospersonales(cliente)
 let pedido = Number(prompt("Que opcion queres? (opcion 4 para salir del menu)"));
+// en este apartado se ve el precio de los productos
 while(pedido != 4){
     switch (pedido){
         case 1:
@@ -66,10 +65,11 @@ while(pedido != 4){
     }
     pedido = Number(prompt ("Queres hacer un nuevo pedido? (opcion 4 para salir del menu)"));
 }
+// si incluye descuento o no
 let cantidad = Number(prompt(`ingrese la cantidad deseada de menus:`));
 while(cantidad != 0){
     if(cantidad == 7){
-    alert(`tenes un descuento del 10%`);
+    alert(`Con la compra de 7,tenes un descuento del 10% en el total de la compra`);
     break;
 }else if(cantidad <=6){
     alert(`Tu pedido tiene ${cantidad} menus`);
@@ -80,3 +80,6 @@ while(cantidad != 0){
     cantidad = Number(prompt(`ingrese la cantidad deseada de menus:`));
 }
 alert (`Gracias por comprar con nosotros`);
+}else{
+    alert("No eres mayor de edad por lo que no puedes entrar a la web");
+}
